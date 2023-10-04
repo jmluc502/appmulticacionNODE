@@ -6,10 +6,6 @@ const limpiarColores = (texto) => {
     return texto.replace(expresionRegular, '');
   };
 
-
-
-
-
 const crearArchivo = async (base = 5, listar = false, hasta = 5, Guardar= 'Salida') => {
 
     try {
