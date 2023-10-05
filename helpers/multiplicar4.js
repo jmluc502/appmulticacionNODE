@@ -1,7 +1,7 @@
 const fs = require('fs');
 const colors = require('colors');
 
-const limpiarColores = (texto) => {
+const BorarColores = (texto) => {
      const expresionRegular = /\x1b\[[0-9;]*m/g;
     return texto.replace(expresionRegular, '');
   };
@@ -24,7 +24,7 @@ const crearArchivo = async (base = 5, listar = false, hasta = 5, Guardar= 'Salid
        
 
         const Carpeta = `${Guardar}/tabla-${base}.txt`;
-        fs.writeFileSync(Carpeta, limpiarColores(salida));
+        fs.writeFileSync(Carpeta, BorarColores(`tabla del ${base}\n**************\n`+base+`  a  `+ hasta+`\n**************\n`+salida));
 
         return Carpeta;
 
