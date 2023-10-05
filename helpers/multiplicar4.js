@@ -1,7 +1,7 @@
 const fs = require('fs');
 const colors = require('colors');
 
-const BorarColores = (texto) => {
+  const BorarColores = (texto) => {
      const expresionRegular = /\x1b\[[0-9;]*m/g;
     return texto.replace(expresionRegular, '');
   };
